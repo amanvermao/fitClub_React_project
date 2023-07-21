@@ -1,0 +1,110 @@
+.Testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+
+}
+
+.t-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1 1;
+    text-transform: uppercase;
+    color: white;
+}
+
+.t-left :nth-child(1) {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.t-left :nth-child(2),
+.t-left :nth-child(3) {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.t-left :nth-child(4) {
+    text-transform: none;
+    letter-spacing: 2px;
+    text-align: justify;
+    line-height: 40px;
+
+
+}
+
+.t-right {
+    flex: 1;
+    position: relative;
+}
+
+.t-right>img {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    object-fit: cover;
+    right: 8rem;
+    top: 1rem;
+}
+
+.t-right .imgtborder {
+    position: absolute;
+    border: 2px solid orange;
+    background-color: transparent;
+    width: 17rem;
+    height: 20rem;
+    right: 9rem;
+    top: -0.1rem;
+  }
+.t-right .imgbg {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    right: 7rem;
+    top: 2rem;
+    background-color: orange;
+  }
+.arrows{
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    bottom: 1rem;
+    left: 3rem;
+
+}
+.arrows :nth-child(1){
+    width: 1.5rem;
+    cursor: pointer;
+}
+.arrows :nth-child(2){
+    width: 1.5rem;
+    cursor: pointer;
+}
+@media screen and (max-width:768px){
+    .Testimonials{
+       flex-direction: column; 
+      
+    }
+    .t-left>:nth-child(2),
+    .t-left>:nth-child(2){
+        font-size: xx-large;
+    }
+    .t-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .t-right>div{
+        position: relative;display: none;
+    }
+    .t-right>img{
+        top: 0; right: 0;position: relative;align-self: center;
+    }
+    .t-right>:last-child{
+        display: block;
+        bottom: 0; left: 0;
+    }
+}
